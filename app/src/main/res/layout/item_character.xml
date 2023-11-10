@@ -1,0 +1,59 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="result"
+            type="com.example.appstarwars.ResultsItem" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{result.name}"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/item_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{result.gender}"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/item_birth_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{result.birthYear}"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/item_skin_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{result.skinColor}"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/item_eye_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{result.eyeColor}"
+            android:textSize="16sp" />
+
+        <!-- Tambahkan TextView untuk tinggi badan -->
+        <TextView
+            android:id="@+id/item_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:heightWithUnit="@{result.height}"
+            android:textSize="16sp" />
+    </LinearLayout>
+</layout>
