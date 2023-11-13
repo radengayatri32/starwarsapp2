@@ -9,7 +9,7 @@ import androidx.room.Query
 @Dao
 interface CharacterDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertCharacter(characters: List<CharacterEntity>)
+    suspend fun insertCharacter(characters: List<CharacterEntity>)
 
     @Query("SELECT * FROM character_table")
     fun getAllCharacters(): LiveData<List<CharacterEntity>>
@@ -18,7 +18,5 @@ interface CharacterDao {
     fun searchCharacters(searchQuery: String): LiveData<List<CharacterEntity>>
 
     @Query("DELETE FROM character_table")
-    fun deleteAllCharacters()
+    suspend fun deleteAllCharacters()
 }
-
-

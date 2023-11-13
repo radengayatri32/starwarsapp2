@@ -2,6 +2,8 @@ package com.example.appstarwars
 
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
+import androidx.annotation.Nullable
+
 
 
 @BindingAdapter ("app:heightWithUnit")
